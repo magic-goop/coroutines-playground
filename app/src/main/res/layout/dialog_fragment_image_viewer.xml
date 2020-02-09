@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/swippable_layout_bg_color">
+
+
+    <com.bogdwellers.pinchtozoom.view.ImageViewPager
+        android:id="@+id/imageViewerPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+        android:id="@+id/imageViewerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/fragment_riddle_indicator_margin_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/rvImages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:spi_dotColor="@color/colorPrimaryDark"
+        app:spi_dotSelectedColor="@color/red"
+        app:spi_dotSelectedSize="@dimen/fragment_riddle_indicator_size"
+        app:spi_dotSize="@dimen/fragment_riddle_indicator_size"
+        app:spi_visibleDotThreshold="1" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/dialog_img_view_close_btn_size"
+        android:layout_height="@dimen/dialog_img_view_close_btn_size"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_close" />
+
+</FrameLayout>
+

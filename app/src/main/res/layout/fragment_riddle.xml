@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent">
+
+    <include layout="@layout/header"/>
+
+    <ScrollView
+            android:id="@+id/scrollRiddle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tvQuestionParentTitle"
+                    style="@style/TextView.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Лерой Браун"/>
+
+            <TextView
+                    android:id="@+id/tvQuestionTitle"
+                    style="@style/TextView.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    android:textSize="@dimen/fragment_riddle_title_text_size"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestionParentTitle"
+                    tools:text="Герой Арктики"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fragment_riddle_image_height"
+                    android:layout_marginTop="@dimen/list_item_spacing"
+                    android:overScrollMode="never"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestionTitle"/>
+
+            <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/fragment_riddle_indicator_margin_bottom"
+                    app:layout_constraintBottom_toBottomOf="@id/rvImages"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:spi_dotColor="@color/colorPrimaryDark"
+                    app:spi_dotSelectedColor="@color/red"
+                    app:spi_dotSelectedSize="@dimen/fragment_riddle_indicator_size"
+                    app:spi_dotSize="@dimen/fragment_riddle_indicator_size"
+                    app:spi_visibleDotThreshold="1"/>
+
+
+            <TextView
+                    android:id="@+id/tvQuestionText"
+                    style="@style/TextView.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvImages"
+                    tools:text=" - Ты почти не прикоснулся к супу, - заметила миссис Браун. – У тебя что-то не ладится?
+   – Я не голоден, – заявил шеф Браун, отодвигая стул от стола.
+   – Все переживаешь из-за этой истории с миссис Ван Твиддл? Прекрати наконец корить себя!
+   – Что стряслось, папа? – поинтересовался Энциклопедия.
+   – Сам бы хотел разобраться, – ответил шеф Браун. – Вчера вечером я был у миссис Ван Твиддл на ежегодном благотворительном вечере.
+     Охранял ее бриллиантовое ожерелье. – Он шумно перевел дух. – И это ожерелье украли прямо у меня из-под носа!
+   – Должно быть, миссис Ван Твиддл предполагала, что ожерелье могут украсть, – заметил Энциклопедия.
+   – Иначе зачем бы ей обращаться к тебе с просьбой об охране?
+   Шеф Браун утвердительно кивнул.
+   – На прошлой неделе она получила анонимное письмо, где ей предлагалось оставить десять тысяч долларов наличными
+     позади статуи Джорджа Вашингтона в городском парке. В противном случае, говорилось в письме, ожерелье будет украдено.
+   – Вот это да! – воскликнул Энциклопедия. – И что, ожерелье действительно стоит десять тысяч?
+   – Гораздо больше. Хочешь узнать факты?
+   Энциклопедия по привычке закрыл глаза, чтобы сосредоточиться.
+   – Выкладывай.
+   – На этом вечере миссис Ван Твиддл планировала расстаться с опасным украшением, – начал шеф Браун.
+   – Хотела провести аукцион и ровно в полночь передать ожерелье тому, кто предложит наивысшую цену.
+   Вырученные деньги предназначались для благотворительного фонда.
+   Чтобы показать ожерелье будущим покупателям, миссис Ван Твиддл в начале вечера дала поносить его до аукциона
+   своей давней приятельнице мисс Старк. Я не спускал с него глаз. Но часов в одиннадцать мисс Старк пожаловалась, что ей нездоровится,
+   и поднялась наверх, в комнату для гостей, намереваясь немного отдохнуть.
+   Я осмотрел эту комнату, убедился, что там никого нет, и заставил мисс Старк запереться изнутри, а сам остался поблизости.
+   Минут через десять я вдруг услышал, как она вскрикнула, затем прогремели два выстрела. Я позвал мисс Старк – она не ответила.
+   Тогда я взломал дверь и нашел мисс Старк на кровати в обмороке. Ожерелья на ней не было…
+   Придя в себя, – продолжил шеф Браун свой рассказ, – мисс Старк почти ничего не смогла сообщить мне.
+   Все произошло так быстро и неожиданно! Она ничего не слышала, а потом потеряла сознание раньше, чем сумела разглядеть вора.
+   По-видимому, он забрался в комнату через окно, а затем вылез тем же путем. Две пули застряли в стене над изголовьем кровати.
+   Ей здорово повезло, что она осталась жива!..
+   Отец замолк, и в столовой Браунов повисло молчание. Тишину нарушил Энциклопедия, задавший единственный вопрос:
+   – После того как ты взломал дверь, оставалась ли мисс Старк хоть на минуту одна?
+   Шеф Браун откровенно удивился вопросу и подумал, прежде чем ответить:
+   – Сейчас соображу… Нет, я был рядом все время. И миссис Ван Твиддл тоже поднялась наверх, услышав грохот.
+   Потом прибыл врач, забрал мисс Старк в больницу и находился при ней неотлучно.
+   – В больницу? – переспросила миссис Браун. – Бедняжка! Она, должно быть, страшно перепугалась…
+   – У нее был тяжелый шок. Врач предписал полный отдых и покой. Она пробудет в больнице до завтра.
+   – Это хорошо, – произнес Энциклопедия, открывая глаза. – Но нельзя терять ни минуты.
+   Комнату, где она была, надо обыскать до ее возвращения.
+   – Обыскать? Зачем?
+   – Чтобы найти ожерелье. И оружие.
+   – Лерой! – вмешалась миссис Браун. – Неужели, по-твоему, вор был так глуп, что оставил ожерелье и пистолет на месте преступления?
+   – Не оставил, а оставила, – поправил Энциклопедия. – У нее просто не было другого выхода.
+   – Оставила? – Шеф Браун чуть не задохнулся от изумления. – Ты имеешь в виду мисс Старк?
+   Но что заставляет тебя заподозрить именно ее?
+   – Все очень просто, – ответил Энциклопедия. – Сперва она попыталась вытрясти из своей давней приятельницы десять тысяч,
+   написав анонимное письмо.
+   – А письмо не сработало, – подхватил шеф Браун. – Хозяйка наняла меня охранять ожерелье.
+   Выходит, письмо лишь осложнило задачу мисс Старк.
+   – Она так не считала. Уверен, она и уговорила миссис Ван Твиддл дать ей надеть ожерелье на вечере.
+   – Как хочешь, но твоя версия кажется мне неубедительной, – заявил шеф Браун.
+   – Подумай сам, с какой скоростью она должна была действовать, чтобы дважды выстрелить в стену,
+   а потом успеть спрятать ожерелье и пистолет. Она ведь не могла не понимать, что я взломаю дверь сразу же после стрельбы.
+   – Она спрятала ожерелье до того, как нажать курок.
+   – Ну что ж, если ты прав, то пистолет и ожерелье до сих пор в комнате.
+   Я позвоню кому-нибудь из своих людей, чтобы произвели немедленный обыск.
+   Через час полисмен Мерфи сообщил шефу по телефону, что обыскал комнату для гостей в доме миссис Ван Твиддл
+   и обнаружил ожерелье вместе с пистолетом в шляпной коробке, стоящей в стенном шкафу.
+   К тому времени Брауны уже закончили ужинать. Энциклопедия помогал матери вытирать посуду, когда, узнав о находке, высказался:
+   – Мисс Старк надеялась выйти из больницы богатой женщиной…
+   – Она думала, – подхватил шеф Браун, – что нет ничего проще, чем зайти в ту комнату еще раз за шляпной коробкой.
+   – Затея могла бы сойти ей с рук, – добавил Энциклопедия. – Но каждый преступник делает хотя бы одну ошибку.
+  "/>
+
+            <View
+                    android:id="@+id/tvQuestionItselfDivider"
+                    style="@style/TextView.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestionText"/>
+
+
+            <TextView
+                    android:id="@+id/tvQuestionItself"
+                    style="@style/TextView.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestionItselfDivider"
+                    tools:text="КАКУЮ ЖЕ ОШИБКУ ДОПУСТИЛА МИСС СТАРК?"/>
+
+
+            <Button
+                    android:id="@+id/btnAnswer"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fragment_riddle_btn_margin"
+                    android:padding="@dimen/fragment_riddle_btn_padding"
+                    android:theme="@style/BaseButtonStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuestionItself"
+                    tools:text="Показать/Скрыть ответ"/>
+
+            <TextView
+                    android:id="@+id/tvAnswer"
+                    style="@style/TextView.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/base_tv_margin"
+                    android:paddingBottom="@dimen/base_tv_margin"
+                    android:textSize="@dimen/fragment_riddle_answer_text_size"
+                    android:textStyle="bold|italic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnAnswer"
+                    tools:text="Ответ"/>
+
+            <Button
+                    android:id="@+id/btnNextQuestion"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/fragment_riddle_btn_margin"
+                    android:layout_marginTop="@dimen/list_item_spacing"
+                    android:padding="@dimen/fragment_riddle_btn_padding"
+                    android:text="@string/fragment_riddle_next_riddle_btn_text"
+                    android:theme="@style/NextRiddleButtonStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAnswer"
+                    tools:text="СЛЕДУЮЩАЯ ЗАГАДКА"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

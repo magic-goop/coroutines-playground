@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView.Headline" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/font_headline</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Title" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/font_title</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+
+    <style name="TextView.SubHeader" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/font_sub_header</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Body" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Comment" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/font_comment</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Caption" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/font_caption</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Error" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Warning" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/yellow</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+    <style name="TextView.Success" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">@string/font_family_regular</item>
+    </style>
+
+</resources>

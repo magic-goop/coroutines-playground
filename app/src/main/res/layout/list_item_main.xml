@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"
+        android:clipToPadding="false"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_3"
+        app:cardElevation="@dimen/list_item_main_card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/imgFront"
+                android:layout_width="@dimen/list_item_main_img_size"
+                android:layout_height="@dimen/list_item_main_img_size"
+                android:layout_margin="@dimen/base_tv_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/list_item_riddle_list_img_size"
+                android:layout_margin="@dimen/base_tv_margin"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/imgFront"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                    android:id="@+id/imgAnswered"
+                    android:layout_width="@dimen/list_item_riddle_list_img_size"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_check"
+                    tools:src="@drawable/ic_check_grey"/>
+
+
+            <TextView
+                    android:id="@+id/tvSolved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/base_tv_margin"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    tools:text="24"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/base_tv_margin"
+                    android:text="@string/list_item_main_solved_delimeter"
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/tvUnSolved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/base_tv_margin"
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="bold"
+                    tools:text="37"/>
+
+        </LinearLayout>
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TextView.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_tv_margin"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgFront"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Title"/>
+
+        <TextView
+                android:id="@+id/tvDescription"
+                style="@style/TextView.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/base_tv_margin"
+                android:layout_marginLeft="@dimen/base_tv_margin"
+                android:layout_marginRight="@dimen/base_tv_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools:text="Description long Description long Description long Description"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+

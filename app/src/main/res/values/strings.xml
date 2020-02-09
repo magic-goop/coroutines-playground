@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coroutines playground</string>
+    <string name="app_name_title">Coroutines playground</string>
+    <string name="ellipsis">...</string>
+    <string name="show_answer_text">ПОКАЗАТЬ ОТВЕТ</string>
+    <string name="hide_answer_text">СКРЫТЬ ОТВЕТ</string>
+    <string name="fragment_riddle_next_riddle_btn_text">СЛЕДУЮЩАЯ ЗАГАДКА</string>
+    <string name="list_item_main_solved_delimeter">/</string>
+</resources>

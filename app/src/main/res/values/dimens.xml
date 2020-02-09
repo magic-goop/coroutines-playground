@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dp_0">0dp</dimen>
+    <dimen name="dp_3">3dp</dimen>
+    <dimen name="base_tv_margin">8dp</dimen>
+
+
+    // fonts
+    <dimen name="font_headline">24sp</dimen>
+    <dimen name="font_title">20sp</dimen>
+    <dimen name="font_sub_header">16sp</dimen>
+    <dimen name="font_header">18sp</dimen>
+    <dimen name="font_body">14sp</dimen>
+    <dimen name="font_comment">14sp</dimen>
+    <dimen name="font_caption">12sp</dimen>
+    <dimen name="font_common">14sp</dimen>
+    <dimen name="font_drawer_item">16sp</dimen>
+    <dimen name="font_drawer_sub_item">14sp</dimen>
+    <dimen name="font_drawer_caption">12sp</dimen>
+    <dimen name="font_size_large">21sp</dimen>
+    <dimen name="font_size_ultra_large">34sp</dimen>
+
+    // shadows
+    <dimen name="elevation_big">8dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+
+
+    //MainFragment
+    <dimen name="list_item_main_img_size">100dp</dimen>
+    <dimen name="list_item_spacing">5dp</dimen>
+    <dimen name="list_item_main_corner_radius">6dp</dimen>
+    <dimen name="list_item_main_card_elevation">2dp</dimen>
+    <dimen name="main_fragment_banner_margin">8dp</dimen>
+    <dimen name="main_fragment_list_margin_top">50dp</dimen>
+    <dimen name="list_item_main_badge_icon_size">45dp</dimen>
+
+
+    //RiddleListFragment
+    <dimen name="list_item_riddle_list_img_size">40dp</dimen>
+
+
+    //RiddleFragment
+    <dimen name="fragment_riddle_image_height">200dp</dimen>
+    <dimen name="fragment_riddle_title_text_size">16sp</dimen>
+    <dimen name="fragment_riddle_answer_text_size">16sp</dimen>
+    <dimen name="fragment_riddle_indicator_size">7dp</dimen>
+    <dimen name="fragment_riddle_indicator_margin_bottom">15dp</dimen>
+    <dimen name="fragment_riddle_btn_padding">20dp</dimen>
+    <dimen name="fragment_riddle_btn_margin">4dp</dimen>
+    <dimen name="dialog_img_view_close_btn_size">50dp</dimen>
+    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+
+
+</resources>

@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: '../buildsystem/ktlint.gradle'
+
+android {
+    compileSdkVersion compile_sdk
+    defaultConfig {
+        applicationId application_id
+        minSdkVersion min_sdk
+        targetSdkVersion target_sdk
+        versionCode version_code
+        versionName version_name
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner testAndroidInstrumentationRunner
+    }
+    buildTypes {
+        debug {
+            initWith debug
+            minifyEnabled false
+            applicationIdSuffix '.debug'
+        }
+
+        release {
+            minifyEnabled true
+            applicationIdSuffix ''
+            versionNameSuffix ''
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    debugImplementation deps.facebookStetho
+    implementation deps.kotlin
+    implementation deps.coroutines
+    implementation deps.coroutinesAndroid
+
+    implementation deps.appCompat
+    implementation deps.cardView
+    implementation deps.design
+    implementation deps.constraint
+    implementation deps.lifecycleExtensions
+    implementation deps.koin
+    implementation deps.koinArhc
+    implementation deps.timber
+    implementation deps.room
+    implementation deps.sqliteOpenHelper
+    implementation deps.glide
+    kapt deps.glideAnnotation
+    implementation deps.cicerone
+    implementation deps.pagerIndicator
+    implementation deps.pinchtozoom
+    implementation deps.facebookStetho
+
+
+    implementation deps.roomRx
+    kapt deps.roomApt
+
+
+    testImplementation testDeps.junit
+    testImplementation testDeps.roomTesting
+    testImplementation testDeps.mockk
+    testImplementation deps.kotlin
+    testImplementation deps.coroutines
+
+
+    androidTestImplementation(testDeps.barista) {
+        exclude group: 'com.android.support'
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    androidTestImplementation deps.kotlin
+    androidTestImplementation deps.coroutines
+    androidTestImplementation testDeps.junit
+    androidTestImplementation testDeps.roomTesting
+    androidTestImplementation testDeps.androidTestUiCore
+    androidTestImplementation testDeps.supportTestRunner
+    androidTestImplementation testDeps.testRules
+    androidTestImplementation testDeps.uiTestExtJunit
+    androidTestImplementation testDeps.espressoCore
+    androidTestUtil testDeps.uiTestOrchestrator
+}

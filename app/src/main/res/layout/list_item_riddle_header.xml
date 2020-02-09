@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginRight="@dimen/dp_5"
+        android:clipToPadding="false"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dp_3"
+        app:cardElevation="@dimen/list_item_main_card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tvHeaderTitle"
+                style="@style/TextView.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/base_tv_margin"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="TitleTitle TitleTitleTitleTitle TitleTitleTitleTitle TitleTitleTitleTitle TitleTitle"/>
+
+        <TextView
+                android:id="@+id/tvHeaderDescription"
+                style="@style/TextView.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/base_tv_margin"
+                android:layout_marginRight="@dimen/base_tv_margin"
+                android:layout_marginTop="@dimen/base_tv_margin"
+                android:ellipsize="end"
+                android:maxLines="@integer/riddle_list_fragment_description_default_lines"
+                android:paddingBottom="@dimen/base_tv_margin"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Description long Description long Description long Description Description long Description long Description long Description Description long Description long Description long Description Description long Description long Description long Description"/>
+
+
+        <TextView
+                android:id="@+id/tvShowFullDescription"
+                style="@style/TextView.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/ellipsis"
+                android:textStyle="bold"
+                android:translationY="-8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeaderDescription"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
